@@ -1,0 +1,7 @@
+Variant,Accuracy
+"k=3, train 2016-18, test 2019-20, both features",0.6618
+"k=3, train 2016-18, test 2019-20, gambling only",0.5147
+"k=3, train 2016-18, test 2019-20, offences only",0.6471
+"k=3, train 2016/18/19, test 2017/20, both features",0.6912
+majority-class baseline,0.4529
+"k-NN, nested CV grouped by council (honest)",0.5162

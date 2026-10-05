@@ -1,0 +1,14 @@
+,value
+rows,170.0
+lgas,34.0
+years,5.0
+class_low,32.0
+class_medium,77.0
+class_high,61.0
+majority_class_share,0.4529
+price_skew,1.2104
+r_price_egm,-0.4269
+r_price_offence,0.0158
+between_lga_variance_offence,0.9739
+between_lga_variance_egm,0.8933
+lgas_with_constant_label,25.0
