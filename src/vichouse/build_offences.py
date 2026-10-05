@@ -18,6 +18,13 @@ procedures offences. Taking ``[0]`` recovers the division.
 The divisional percentage breakdown is computed and kept because the original
 project computed it, but the submitted report found it carried no useful signal
 and excluded it from the modelling. It is retained for completeness, not used.
+
+One caveat if anyone ever does use it: the source also has a division F,
+"other offences", worth 1.70% of all offences in this period. The original
+project enumerated only A to E, so the five percentages sum to between 86% and
+100% rather than to 100%. That behaviour is reproduced here deliberately, to
+keep parity with the published results, and it affects nothing else because no
+model uses these columns.
 """
 
 from __future__ import annotations
@@ -54,6 +61,10 @@ def build_offences_by_lga(refresh: bool = False) -> pd.DataFrame:
         .sum()
         .unstack("Code")
         .reindex(columns=TYPE_CODES)
+        # An LGA-year with no offences in some division yields no group at
+        # all, so unstack leaves a hole. The share is genuinely zero, not
+        # unknown: Queenscliffe recorded no drug offences in 2018.
+        .fillna(0)
         .div(total_count, axis=0)
         .mul(100)
         .round(2)
