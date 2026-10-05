@@ -1,0 +1,24 @@
+# Pinned exactly, not with >=, on purpose.
+#
+# The parity test suite asserts that the rebuilt pipeline reproduces the
+# original 2024 outputs to the cent. That guarantee is only meaningful against
+# a fixed interpreter and library set, so these versions are the contract.
+#
+# Verified: Python 3.13.7 + this set reproduces all four original generated
+# CSVs byte-for-byte. See tests/ and results/COMPARISON.md.
+#
+# Do NOT relax to pandas>=2: on Python 3.14 an unpinned install resolves to
+# pandas 3.x, which removes DataFrame._append (used by the archived original
+# scripts) and changes the default string dtype.
+
+pandas==2.3.3
+numpy==2.3.3
+scipy==1.16.2
+scikit-learn==1.7.2
+statsmodels==0.15.0
+matplotlib==3.10.6
+seaborn==0.13.2
+openpyxl==3.1.5
+
+# dev
+pytest==8.4.2
