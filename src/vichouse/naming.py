@@ -31,7 +31,7 @@ LGA_RENAMES = {
 # Set to False to reproduce the original project's output exactly, including
 # the dropped LGA. The parity suite uses this to prove the rebuilt pipeline is
 # faithful *before* the fix is applied, so that the fix's effect is isolated.
-RENAMES_ENABLED = False
+RENAMES_ENABLED = True
 
 
 def normalise_lga(names: pd.Series) -> pd.Series:
