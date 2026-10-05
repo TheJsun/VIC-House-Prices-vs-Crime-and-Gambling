@@ -1,0 +1,7 @@
+Sample,Model,Offence coefficient,r,R2,RMSE
+All councils,EGM Rate,,0.4269,0.1823,444399.0788
+All councils,Offence Rate,2.1663,0.0158,0.0002,491376.6468
+All councils,EGM Rate + Offence Rate,23.9505,0.4577,0.2095,436947.6236
+Excluding Melbourne,EGM Rate,,0.4841,0.2343,430249.5043
+Excluding Melbourne,Offence Rate,-29.2416,0.1501,0.0225,486129.1684
+Excluding Melbourne,EGM Rate + Offence Rate,-6.1236,0.485,0.2353,429988.9191

@@ -1,0 +1,4 @@
+Model,Row-wise CV (leaky),Grouped CV (honest),Grouped CV sd,Grouped CV CI low,Grouped CV CI high
+k-NN (unscaled),0.6471,0.5162,0.1703,0.3669,0.6655
+k-NN (scaled),0.7621,0.4095,0.1387,0.288,0.5311
+Decision tree (pruned),0.6868,0.5095,0.0946,0.4266,0.5925

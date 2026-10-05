@@ -54,3 +54,25 @@ $RECYCLE.BIN/
 
 # Python
 __pycache__
+
+# --- project ---
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Binary data caches are never committed; the CSV cache in data/interim/ is.
+data/**/*.parquet
+data/**/*.feather
+
+# Original scripts wrote their outputs to the CWD. If anyone runs an archived
+# script from the repo root, catch the strays here rather than committing them.
+/Houses by LGA.csv
+/EGM-rate-2019.csv
+/EGM-New-Format.csv
+/Offences By LGA NEW.csv
+/Offences By LGA.csv
